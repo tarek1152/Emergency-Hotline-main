@@ -7,7 +7,7 @@ loveBtns.forEach((btn) => {
     loveCount.innerText = current + 1;
   });
 });
-const callBtns = document.querySelectorAll(".callBtn");
+const callBtns = document.querySelectorAll(".call-btn");
 const coinCount = document.getElementById("coinCount");
 
 callBtns.forEach((btn) => {

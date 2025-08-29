@@ -1,0 +1,25 @@
+getElementById vs getElementsByClassName vs querySelector / querySelectorAll
+
+getElementById → একটিমাত্র এলিমেন্ট, id দিয়ে।
+
+getElementsByClassName → লাইভ HTMLCollection, একই class সব এলিমেন্ট আনবে।
+
+querySelector → প্রথম ম্যাচ, querySelectorAll → সব মিলিয়ে static NodeList (CSS selector ব্যবহার)।
+
+How to create + insert element
+
+document.createElement(), set text/attrs, parent.appendChild() বা insertBefore(); উদাহরণ দেখাও।
+
+Event Bubbling
+
+ইভেন্ট নিচে থেকে উপরে পর্যন্ত (child → parent) বয়ে যায়; উদাহরণ: click on <button> will bubble to its container.
+
+Event Delegation
+
+বড় লিস্টে আলাদা listener না দিয়ে parent এ একটাই listener ব্যবহার করে target চেক করে কাজ করা — বেশি efficient।
+
+preventDefault() vs stopPropagation()
+
+preventDefault() → ব্রাউজারের default action বন্ধ করে (form submit, anchor navigation)।
+
+stopPropagation() → ইভেন্ট বুদবুদ (bubbling) থামায়।

@@ -10,6 +10,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style/style.css">
+  <script src="script.js" defer></script>
 </head>
 </head>
 <body class="font-hind bg-gray-100">
@@ -20,15 +21,16 @@
         </div>
         <div class="flex items-center gap-7 px-6 py-6 ml-[20px] text-gray-700 text-lg">
             <div class="flex items-center gap-1 bg-gray-500 px-3 py-3 rounded-2xl w-[80px] text-white ">
-            <h3>0</h3>
+            <h3 id="loveCount">0</h3>
             <img class="w-[20px]" src="image/heart.png" alt="">
             </div>
-           <div class="flex items-center gap-1  bg-gray-500 px-3 py-3 rounded-2xl w-[80px] text-white ">
-            <h3>100</h3>
+           <div  class="flex items-center gap-1  bg-gray-500 px-3 py-3 rounded-2xl w-[80px] text-white ">
+            <h3 id="coinCount">100</h3>
             <img class="w-[20px]" src="image/coin.png" alt="">
            </div>
-           <div class="items-center gap-1  bg-green-800 px-3 py-3 rounded-2xl w-[100px] text-white ">
-            <h3>0 Copy</h3>
+           <div  class="items-center gap-1 flex  bg-green-800 px-3 py-3 rounded-2xl w-[100px] text-white ">
+            <button id="copyCount">0</button>
+            <h3>Copy</h3>
            </div>
             
         </div>
@@ -57,14 +59,14 @@
                      <div>
                        <div class="text-xs text-gray-500">All</div>
                        <h4 class="font-semibold">National Emergency Number</h4>
-                       <div class="text-xs text-gray-400">National Emergency</div>
+                       <div id="user1" class="text-xs text-gray-400">National Emergency</div>
                      </div>
-                         <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+                         <button class=" loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
                      </div>
-                          <div class="my-4 text-2xl font-semibold">999</div>
+                          <div id="number1" class="my-4 text-2xl font-semibold">999</div>
                             <div class="flex gap-3">
-                              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-                              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+                              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm" data-target="number1">Copy</button>
+                              <button class=" call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="National Emergency(999)">Call</button>
                             </div>
                </div>
               <!-- card-2  -->
@@ -73,14 +75,14 @@
               <div>
                 <div class="text-xs text-gray-500">Police</div>
                 <h4 class="font-semibold">Police Helpline Number</h4>
-                <div class="text-xs text-gray-400">Police</div>
+                <div id="user2" class="text-xs text-gray-400">Police</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class=" loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">999</div>
+            <div id="number2" class="my-4 text-2xl font-semibold">999</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm" data-target="number2">Copy</button>
+              <button class=" call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Police Helpline Number(999)">Call</button>
             </div>
           </div>
           <!-- card-3  -->
@@ -89,14 +91,14 @@
               <div>
                 <div class="text-xs text-gray-500">Fire</div>
                 <h4 class="font-semibold">Fire Service Number</h4>
-                <div class="text-xs text-gray-400">Fire Service</div>
+                <div id="user3" class="text-xs text-gray-400">Fire Service</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">999</div>
+            <div id="number3" class="my-4 text-2xl font-semibold">999</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm" data-target="number3">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Fire service(999)">Call</button>
             </div>
           </div>
           <!-- card-4  -->
@@ -105,14 +107,14 @@
               <div>
                 <div class="text-xs text-gray-500">Health</div>
                 <h4 class="font-semibold">Ambulance Service</h4>
-                <div class="text-xs text-gray-400">Ambulance</div>
+                <div id="user4" class="text-xs text-gray-400">Ambulance</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">1994-999999</div>
+            <div id="number4" class="my-4 text-2xl font-semibold">1994-999999</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm"data-target="number4">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Ambulance service(1994-999999)">Call</button>
             </div>
           </div>
           <!-- card-5  -->
@@ -121,14 +123,14 @@
               <div>
                 <div class="text-xs text-gray-500">Help</div>
                 <h4 class="font-semibold">Women & Child Helpline</h4>
-                <div class="text-xs text-gray-400">Help</div>
+                <div id="user5" class="text-xs text-gray-400">Help</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">109</div>
+            <div id="number5" class="my-4 text-2xl font-semibold">109</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class=" copy-btn flex-1 px-3 py-2 border rounded text-sm"data-target="number5">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Women and child Helpline(109)">Call</button>
             </div>
           </div>
           <!-- card-6  -->
@@ -137,14 +139,14 @@
               <div>
                 <div class="text-xs text-gray-500">Govt</div>
                 <h4 class="font-semibold">Anti-Corruption Helpline</h4>
-                <div class="text-xs text-gray-400">Anti-Corruption</div>
+                <div id="user6" class="text-xs text-gray-400">Anti-Corruption</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">106</div>
+            <div id="number6" class="my-4 text-2xl font-semibold">106</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class=" copy-btn flex-1 px-3 py-2 border rounded text-sm"data-target="number6">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Anti-Corruption(106)">Call</button>
             </div>
           </div>
           <!-- card-7  -->
@@ -153,14 +155,14 @@
               <div>
                 <div class="text-xs text-gray-500">Health</div>
                 <h4 class="font-semibold">Electricity Helpline</h4>
-                <div class="text-xs text-gray-400">Electricity Outage</div>
+                <div id="user7" class="text-xs text-gray-400">Electricity Outage</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">16216</div>
+            <div id="number7" class="my-4 text-2xl font-semibold">16216</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm" data-target="number7">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Electricity Outage(16216)">Call</button>
             </div>
           </div>
           <!-- card-8  -->
@@ -169,14 +171,14 @@
               <div>
                 <div class="text-xs text-gray-500">Help</div>
                 <h4 class="font-semibold">Brac Helpline</h4>
-                <div class="text-xs text-gray-400">Brac</div>
+                <div id="user8" class="text-xs text-gray-400">Brac</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">16445</div>
+            <div id="number8" class="my-4 text-2xl font-semibold">16445</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copy-btn flex-1 px-3 py-2 border rounded text-sm"data-target="number8">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm" data-user="Brac Helpline (16445)">Call</button>
             </div>
           </div>
           <!-- card-9  -->
@@ -185,14 +187,14 @@
               <div>
                 <div class="text-xs text-gray-500">Govt</div>
                 <h4 class="font-semibold">Bangladesh Railway Helpline </h4>
-                <div class="text-xs text-gray-400">Bangladesh Railway</div>
+                <div id="user9" class="text-xs text-gray-400">Bangladesh Railway</div>
               </div>
-              <button class="p-2 rounded-full hover:bg-gray-100">❤</button>
+              <button class="loveBtn p-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-heart"></i></button>
             </div>
-            <div class="my-4 text-2xl font-semibold">163</div>
+            <div id="number9" class="my-4 text-2xl font-semibold">163</div>
             <div class="flex gap-3">
-              <button class="flex-1 px-3 py-2 border rounded text-sm">Copy</button>
-              <button class="flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm">Call</button>
+              <button class="copyBtn flex-1 px-3 py-2 border rounded text-sm"data-target="number9">Copy</button>
+              <button class="call-btn flex-1 px-3 py-2 bg-green-600 text-white rounded text-sm"data-user="Bangladesh Railway (163)">Call</button>
             </div>
           </div>
 
@@ -202,23 +204,25 @@
   </section>
     
   <section>
-    <div class="md:col-span-3 w-[400px] h-[1400px] mt-[25px]">
-        <div class="bg-white p-4 rounded-lg shadow">
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5 3.8 9.9 9 11 5.2-1.1 9-6 9-11V5l-9-4z"/></svg>
-              <h3 class="font-medium">Call History</h3>
-            </div>
-            <button class="px-3 py-1 bg-green-600 text-white rounded text-sm">Clear</button>
-          </div>
-
-          <div class="text-sm text-gray-700 space-y-3">
-            <p class="text-gray-400">No calls yet.</p>
-          </div>
+  <div class="md:col-span-3 w-[400px] h-[400px] mt-[25px]">
+    <div class="bg-white p-4 rounded-lg shadow">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5 3.8 9.9 9 11 5.2-1.1 9-6 9-11V5l-9-4z"/>
+          </svg>
+          <h3 class="font-medium">Call History</h3>
         </div>
+        <button id="clearBtn" class="px-3 py-1 bg-green-600 text-white rounded text-sm">Clear</button>
       </div>
-  </section>
 
+      
+      <div id="callHistory" class="text-sm text-gray-700 space-y-3">
+        <p class="text-gray-400">No calls yet.</p>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
    
 
